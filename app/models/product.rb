@@ -1,4 +1,3 @@
 class Product < ApplicationRecord
-
-    has_one :consumer
+   validates :name, presence: true
 end

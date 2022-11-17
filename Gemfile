@@ -37,16 +37,19 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 group :development, :test do
-
-
-  gem 'rspec-rails', '~> 3.9'
+  gem 'rspec-rails'
   gem 'factory_bot_rails'
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'faker'
+  gem 'pry-byebug'
+end
+
+group :test do
+  gem "shoulda-matchers", "~> 5.1.0"
+  gem 'simplecov', require: false
+  gem 'simplecov-lcov', require: false
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
